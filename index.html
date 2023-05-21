@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>
+      Eco-Tech Electronics |Innovation That Saves, Appliances That Perform
+    </title>
+  </head>
+  <body>
+    <!--header/home ------section-->
+    <header class="header">
+      <nav class="nav">
+        <img
+          src="img/logo.png"
+          alt="Eco-Tech logo"
+          class="nav__logo"
+          id="logo"
+        />
+
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--1">Products</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--2">Cart</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__title">
+        <h1>
+          <!-- Green highlight effect -->
+          <span class="highlight">Innovation</span>
+          that saves<br />
+          <span class="highlight">Appliances</span>
+          that Perform<br />
+        </h1>
+        <h4>Your one stop shop for all your Home appliances!</h4>
+        <button class="btn--text btn--scroll-to">
+          See our products &DownArrow;
+        </button>
+        <img src="img/hero.png" class="header__img" alt="Eco-Tech Products" />
+      </div>
+    </header>
+    <!--products ------------------section-->
+
+    <section class="section" id="section--1">
+      <div class="section__title">
+        <h2 class="section__description">OUR PRODUCTS</h2>
+        <h3 class="section__header">The Latest Appliances For Your Home.</h3>
+      </div>
+      <div class="all-products">
+        <!-- LG fridge -->
+        <div class="product">
+          <img class="lg_fridge" src="/img/lg.avif" />
+          <div class="product-info">
+            <h5 class="product-title">InstaView Door-in-Door™ Refrigerator</h5>
+            <p class="product-title" style="font-weight: bold">Key Features: <ul style="font-weight: bold;"> <li>Raid the fridge without losing your cool with Door-In-Door®</li> 
+              <li>Smart control, smart life with LG ThinQ®</li>
+              <li>10 year parts warranty on the Inverter Linear Compressor</li>
+            </ul> </p>
+            <p class="product-price">$2,000.00</p>
+          </div>
+        </div>
+        <!-- Beko washing mashine -->
+        <div class="product">
+          <img class="beko" src="/img/Beko.jpg" />
+          <div class="product-info">
+            <h5 class="product-title" ">Beko 8KG Washing Machine</h5>
+            <p class="product-title" style="font-weight: bold">Key Features: <ul style="font-weight: bold; text-align: left;"> <li>Designed to reduce plastic pollution</li> 
+              <li>Child Safety Lock.</li>
+              <li>Bluetooth Connected with HomeWhiz.</li>
+            </ul> </p>
+            <p class="product-price">$900.00</p>
+          </div>
+        </div>
+       <!-- tcl tv -->
+        <div class="product">
+          <img class="tcl_tv" src="/img/tcl_tv.jpg" />
+          <div class="product-info">
+            <h5 class="product-title">TCL SMART 65" CLASS 5-SERIES</h5>
+            <p class="product-title" style="font-weight: bold">Key Features: <ul style="font-weight: bold;"> <li>Auto Game Mode for a responsive gaming experience</li> 
+              <li>Dolby Vision HDR</li>
+              <li>Easy Voice Control works with Siri, Alexa, and Hey Google</li>
+            </ul> </p>
+            <p class="product-price">$850.00</p>
+          </div>
+        </div>
+        <!-- samsung AC -->
+        <div class="product">
+          <img class="samsung" src="/img/samsung_Ac.webp" />
+          <div class="product-info">
+            <h5 class="product-title">Samsung Inverter Windfree AC</h5>
+            <p class="product-title" style="font-weight: bold">Key Features: <ul style="font-weight: bold;"> <li>WindFree™ Cooling (Energy Saving)</li> 
+              <li>AI Auto Cooling</li>
+              <li>Reduces noise and energy use by 73%</li>
+            </ul> </p>
+            <p class="product-price">$1,200.00</p>
+          </div>
+        </div>
+        <!-- Miele oven -->
+        <div class="product">
+          <img class="miele" src="/img/Miele Oven.webp" />
+          <div class="product-info">
+            <h5 class="product-title">Miele Built In Oven</h5>
+            <p class="product-title" style="font-weight: bold">Key Features: <ul style="font-weight: bold;"> <li>7-segment display with retractable rotary controls – EasyControl</li> 
+              <li>Particularly easy to clean - PerfectClean finish</li>
+              <li>Protects against burns – touch-cool fronts
+                </li>
+            </ul> </p>
+            <p class="product-price">$700.00</p>
+          </div>
+        </div>
+       
+      </div>
+    </section>
+    <!-- Shopping Cart -->
+    <section class="section" id="section--2">
+      <h1 style="text-align: center;">Start Shopping!</h1>
+      <div class="table-container">
+        <table>
+          <tr class="t-heading">
+            <th >Product</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </tr>
+          <tr>
+            <td><img class="lg_fridge" src="/img/lg.avif" /></td>
+            <td>LG Smart Refrigerator $2,000 <br>
+              <input class="input_table" type="number" id="quantity" name="quantity" min="0" value="0" >
+            </td>
+            <td class="total">0</td>
+          </tr>
+          <tr>
+            <td style="height: 399.8px;"><img class="beko" src="/img/Beko.jpg" style="width: 600px; height: 500px;"/></td>
+            <td>Beko Washing Machine $900 <br>
+              <input class="input_table" type="number" id="quantity" name="quantity" min="0" value="0" >
+            </td>
+            <td class="total">0</td>
+          </tr>
+          <tr>
+            <td style="height: 399.8px;"> <img class="tcl_tv" src="/img/tcl_tv.jpg" /></td>
+            <td>TCL SMART SERIES $850 <br>
+              <input class="input_table" type="number" id="quantity" name="quantity" min="0" value="0" >
+            </td>
+            <td class="total">0</td>
+          </tr>
+          <tr>
+            <td style="height: 399.8px;" ><img class="samsung" src="/img/samsung_Ac.webp" style="width: 600px"/></td>
+            <td>Samsung Inverter Windfree AC $1,200 <br>
+              <input class="input_table" type="number" id="quantity" name="quantity" min="0" value="0">
+            </td>
+            <td class="total">0</td>
+          </tr>
+          <tr>
+            <td style="height: 399.8px;" ><img class="miele" src="/img/Miele Oven.webp" /></td>
+            <td>Miele Built In Oven $700 <br>
+              <input class="input_table" type="number" id="quantity" name="quantity" min="0" value="0" >
+            </td>
+            <td class="total">0</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="total-vat">Total</td>
+            <td class="totalPreVAT">0</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="total-vat">VAT(15%)</td>
+            <td class="VAT">0</td>
+          </tr>
+          <tr>
+            <td class="reset">RESET</td>
+            <td class="total-vat">Grand Total</td>
+            <td class="grandTotal">0</td>
+          </tr>
+         
+        </table>
+        
+      </div>
+
+      <!-- Contact FOrm section -->
+      <section class="section" id="section--3">
+        <h2 style="text-align: center;">Feel free to contact us!</h2>
+       
+
+<div class="container">
+  <form action="" id="form">
+    <label for="fname">Full Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Name and Surname..." > <p  id="fname_holder"></p>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" > <p  id="email_holder"></p>
+
+    <label for="phone">Phone number:</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="1234-123-1234"  > <p  id="phone_holder"></p>
+  <small class="small">Format: 0000-000-0000</small><br><br>
+    
+
+    
+
+    
+
+   
+
+   
+
+    <label for="subject">Subject</label>
+    <textarea id="textarea" name="subject" placeholder="Ask us anything..." style="height:200px"></textarea><p  id="textArea_holder"></p>
+
+    <input id='submit' type="submit" value="Submit">
+  </form>
+      </section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>

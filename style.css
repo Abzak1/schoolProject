@@ -1,0 +1,311 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 70%;
+  box-sizing: border-box;
+}
+
+/* GENERAL ELEMENTS */
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+
+  transition: transform 1s, opacity 1s;
+}
+
+/* HEADER */
+.header {
+  padding: 0 3rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 100;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.nav__logo {
+  height: 5.5rem;
+
+  transition: all 0.3s;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+}
+/* nav and stickly class at the same time */
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.btn {
+  display: inline-block;
+  background-color: #5ec576;
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: #00c4cc;
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+img {
+  transition: filter 0.5s;
+}
+
+.header__title {
+  flex: 1;
+
+  max-width: 115rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  row-gap: 3rem;
+  align-content: center;
+  justify-content: center;
+
+  align-items: start;
+  justify-items: start;
+}
+
+h1 {
+  font-size: 5.5rem;
+  line-height: 1.35;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.highlight {
+  position: relative;
+  color: #00c4cc;
+}
+
+.highlight::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: #00c4cc;
+}
+.header__img {
+  width: 80%;
+  grid-column: 2 / 3;
+  grid-row: 1 / span 4;
+}
+
+.section__description {
+  font-size: 3rem;
+  color: #00c4cc;
+
+  padding: 0 6rem;
+  z-index: 100;
+}
+
+.section__header {
+  z-index: 100;
+  font-size: 2rem;
+}
+.section__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.all-products {
+  display: flex;
+  margin-left: 10rem;
+  flex-wrap: wrap;
+  flex-basis: 33.33%;
+}
+.product {
+  overflow: hidden;
+  background: #ffffff;
+  color: #21201e;
+  text-align: left;
+  width: 380px;
+  height: 600px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  border-radius: 1.2rem;
+  margin: 2rem;
+}
+
+.product-title {
+  font-size: 1rem;
+}
+.product-price {
+  text-align: end;
+
+  font-size: 1.3rem;
+}
+
+.lg_fridge {
+  width: 50rem;
+}
+.tcl_tv {
+  width: 35rem;
+  height: 50%;
+}
+.beko {
+  width: 30rem;
+  height: 50%;
+}
+.samsung {
+  width: 190%;
+  padding-right: 20rem;
+}
+.miele {
+  width: 20rem;
+  padding-top: 5rem;
+}
+
+table {
+  margin-top: 2rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  border: 3px solid black;
+}
+td {
+  border: 3px solid black;
+  text-align: center;
+  padding: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 33%;
+  height: 20%;
+  vertical-align: top;
+}
+.t-heading {
+  background-color: #00c4cc;
+  font-size: 2rem;
+}
+.input_table {
+  width: 20%;
+  padding: 5px 5px;
+  line-height: 18px;
+
+  cursor: pointer;
+}
+.total-vat {
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: end;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #00c4cc;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.small {
+  font-weight: 600;
+}
+label {
+  font-weight: 600;
+  font-size: large;
+}
+.reset {
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.valid {
+  color: #5ec576;
+  font-size: 1.5rem;
+}
+.invalid {
+  color: red;
+  font-size: 1.5rem;
+}
