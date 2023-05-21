@@ -12,10 +12,6 @@ const btnScrollTo = document.querySelector(".btn--scroll-to");
 const navLinks = document.querySelector(".nav");
 const reset = document.querySelector(".reset");
 
-let totalPreVat = 0;
-let vat = 0;
-let grandTotal = 0;
-
 //Cost calculation
 //1st step Attach event handler to parent (event delegation) to avoid attaching to each child
 
@@ -48,7 +44,6 @@ tableContainer.addEventListener("click", function (e) {
     VATselector.textContent = `💲${totalVATNew}`;
     //update the  grand total and fill the textContent
     const grandTotalNew = parseFloat(totalNew) + parseFloat(totalVATNew);
-    console.log(grandTotalNew);
 
     grandTotalSelector.textContent = `💲 ${grandTotalNew.toFixed(2)}`;
   }
@@ -104,7 +99,8 @@ const nameFunction = function (fullName, fnameHolder) {
     fnameHolder.classList.add("valid");
     return true;
   } else {
-    fnameHolder.textContent = "❌ wrong Input. Try again";
+    fnameHolder.textContent =
+      "❌ wrong Input.Please key in Name Surname. Example: Ahmed Hoca";
     fnameHolder.classList.add("invalid");
     fnameHolder.classList.remove("valid");
     return false;
@@ -121,7 +117,7 @@ const emailFunction = function (email, emailHolder) {
     emailHolder.classList.add("valid");
     return true;
   } else {
-    emailHolder.textContent = "❌ wrong Input. Try again";
+    emailHolder.textContent = "❌ wrong Input.Expected format: example@example";
     emailHolder.classList.remove("valid");
     emailHolder.classList.add("invalid");
     return false;
@@ -136,7 +132,7 @@ const phoneFunction = function (phone, phoneHolder) {
     phoneHolder.classList.add("valid");
     return true;
   } else {
-    phoneHolder.textContent = "❌ wrong Input. Try again";
+    phoneHolder.textContent = "❌ wrong Input. Expected format 1234-123-1234";
     phoneHolder.classList.remove("valid");
     phoneHolder.classList.add("invalid");
     return false;
@@ -153,7 +149,8 @@ const textareaFunction = function (textarea, textAreaHolder) {
     textAreaHolder.classList.add("valid");
     return true;
   } else {
-    textAreaHolder.textContent = "❌ wrong Input. Try again";
+    textAreaHolder.textContent =
+      "❌ Input field cannot be empty.Please fill the field.";
     textAreaHolder.classList.remove("valid");
     textAreaHolder.classList.add("invalid");
     return false;
@@ -169,6 +166,7 @@ const emailHolder = document.getElementById("email_holder");
 const phoneHolder = document.getElementById("phone_holder");
 const textAreaHolder = document.getElementById("textArea_holder");
 const submit = document.getElementById("submit");
+const resetBtn = document.getElementById("reset");
 
 // Attach event listeners to the input fields when focus is lost
 fullName.addEventListener("focusout", function () {
@@ -186,7 +184,7 @@ phone.addEventListener("focusout", function () {
 textarea.addEventListener("focusout", function () {
   textareaFunction(textarea, textAreaHolder);
 });
-
+//event listener once a user clicks the submit
 submit.addEventListener("click", function (e) {
   e.preventDefault();
   const isNameValid = nameFunction(fullName, fnameHolder);
@@ -198,3 +196,23 @@ submit.addEventListener("click", function (e) {
     alert("Form submitted successfully");
   else alert("One or more inputs have Errors.Try again");
 });
+
+//reset button for the form
+resetBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  resetFunction();
+});
+//reset function to change the UI
+const resetFunction = function () {
+  fullName.value = "";
+  fnameHolder.textContent = "";
+
+  email.value = "";
+  emailHolder.textContent = "";
+
+  phone.value = "";
+  phoneHolder.textContent = "";
+
+  textarea.value = "";
+  textAreaHolder.textContent = "";
+};

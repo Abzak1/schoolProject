@@ -43,11 +43,6 @@ html {
   z-index: 100;
 }
 
-.nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
-}
-
 .nav__logo {
   height: 5.5rem;
 
@@ -175,10 +170,8 @@ h4 {
 }
 
 .all-products {
-  display: flex;
-  margin-left: 10rem;
-  flex-wrap: wrap;
-  flex-basis: 33.33%;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 .product {
   overflow: hidden;
@@ -193,7 +186,7 @@ h4 {
   align-items: center;
   justify-content: center;
   justify-content: space-between;
-  border-radius: 1.2rem;
+  border-radius: 1.3rem;
   margin: 2rem;
 }
 
@@ -201,9 +194,11 @@ h4 {
   font-size: 1rem;
 }
 .product-price {
+  margin: 2rem;
   text-align: end;
+  font-weight: 600;
 
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .lg_fridge {
@@ -270,7 +265,7 @@ textarea {
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
-  margin-bottom: 16px;
+
   resize: vertical;
 }
 
@@ -281,6 +276,17 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
+}
+input[type="reset"] {
+  background-color: grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 2rem;
+  font-weight: 600;
 }
 
 .container {
