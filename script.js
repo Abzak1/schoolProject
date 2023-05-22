@@ -14,11 +14,23 @@ const reset = document.querySelector(".reset");
 
 //Cost calculation
 //1st step Attach event handler to parent (event delegation) to avoid attaching to each child
-
+//attaching click function
 tableContainer.addEventListener("click", function (e) {
   const current = e.target;
-  const newVal = [];
 
+  calculationFunction(current);
+});
+
+//attaching focus out for the user input when they leave the input field
+tableContainer.addEventListener("focusout", function (e) {
+  const current = e.target;
+
+  calculationFunction(current);
+});
+
+// function for calculations
+const calculationFunction = function (current) {
+  const newVal = [];
   if (current.classList.contains("input_table")) {
     const userInput = Number(current.value); // convert the input into a number
     //Find the price of product from the string in the text content
@@ -47,7 +59,7 @@ tableContainer.addEventListener("click", function (e) {
 
     grandTotalSelector.textContent = `💲 ${grandTotalNew.toFixed(2)}`;
   }
-});
+};
 
 // resetting when a user clicks. Change everything back to zero
 
