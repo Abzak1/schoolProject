@@ -23,7 +23,6 @@ tableContainer.addEventListener("click", function (e) {
 
 //attaching focus out for the user input when they leave the input field
 tableContainer.addEventListener("mouseout", function (e) {
-  console.log(45);
   const current = e.target;
 
   calculationFunction(current);
